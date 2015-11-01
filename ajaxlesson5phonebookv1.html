@@ -1,0 +1,64 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function createRequestObject() {
+
+  var ro
+  var browser = navigator.appName
+  if(browser == "Microsoft Internet Explorer"){
+    ro = new ActiveXObject("Microsoft.XMLHTTP")
+  }else{
+    ro = new XMLHttpRequest()
+  }
+  return ro
+
+}
+
+var http = createRequestObject()
+
+function sndReq() {
+
+  http.open('get', 'ajaxphone.xml', true)
+  http.onreadystatechange = handleResponse
+  http.send(null)
+}
+
+function handleResponse() {
+
+  if(http.readyState == 4) {
+
+    var response = http.responseXML.documentElement
+    listings = response.getElementsByTagName("LISTING")
+
+    for (i=0;i<listings.length;i++)
+      {
+      nameobj = listings[i].getElementsByTagName("FIRST")
+
+      if (nameobj[0].firstChild.data == document.getElementById("first").value){
+
+        addressobj = listings[i].getElementsByTagName("ADDRESS")
+        phoneobj = listings[i].getElementsByTagName("PHONE")
+        pictureobj = listings[i].getElementsByTagName("PICTURE")
+
+        document.getElementById("address").innerHTML = addressobj[0].firstChild.data
+        document.getElementById("phone").innerHTML = phoneobj[0].firstChild.data
+        document.getElementById("picture").innerHTML = "<img src=" + pictureobj[0].firstChild.data + "/>"
+      }
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+<form id="search">
+    <input type="text" id="first" />
+    <input type="button" value="Search Phonebook" onClick="sndReq()" />
+
+</form>
+<div id="address"></div>
+<div id="phone"></div>
+<div id="picture"></div>
+</body>
+</html>

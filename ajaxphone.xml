@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE PHONEBOOK>
+<PHONEBOOK>
+  <LISTING>
+    <FIRST>John</FIRST>
+    <LAST>Smith</LAST>
+    <PHONE>1-800-123-4567</PHONE>
+    <ADDRESS>302 E. John St, Champaign IL 61820</ADDRESS>
+    <EMAIL>john@smith.com</EMAIL>
+    <PICTURE>'cello.jpg'</PICTURE>
+  </LISTING>
+  <LISTING>
+    <FIRST>Jane</FIRST>
+    <LAST>Smith</LAST>
+    <PHONE>1-800-234-5678</PHONE>
+    <ADDRESS>1005 Gravenstein Highway N, Sebastopol CA 95472</ADDRESS>
+    <EMAIL>jane@smith.com</EMAIL>
+    <PICTURE>'violin.jpg'</PICTURE>
+  </LISTING>
+  <LISTING>
+    <FIRST>Diana</FIRST>
+    <LAST>Prince</LAST>
+    <PHONE>1-800-334-2006</PHONE>
+    <ADDRESS>4545 Connecticut Avenue NW, Washington DC 20008</ADDRESS>
+    <EMAIL>dianaprince@iadc.gov</EMAIL>
+    <PICTURE>'violin.jpg'</PICTURE>
+  </LISTING>
+  <LISTING>
+    <FIRST>Steve</FIRST>
+    <LAST>Trevor</LAST>
+    <PHONE>1-800-543-2207</PHONE>
+    <ADDRESS>881 Corolla Drive, Corolla NC 27927</ADDRESS>
+    <EMAIL>stevetrevor@iadc.gov</EMAIL>
+    <PICTURE>'cello.jpg'</PICTURE>
+  </LISTING>
+  <LISTING>
+    <FIRST>Terebithia</FIRST>
+    <LAST>McDaniels</LAST>
+    <PHONE>1-800-228-0075</PHONE>
+    <ADDRESS>22 Belmont Lane, Maryville IL 62062</ADDRESS>
+    <EMAIL>terebithia@mcdanielsengineering.com</EMAIL>
+    <PICTURE>'violin.jpg'</PICTURE>
+  </LISTING>
+</PHONEBOOK>
